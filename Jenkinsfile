@@ -11,5 +11,15 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+    stage('Deploy - Staging') {
+        steps {
+            sh 'ls .'
+        }
+    }
+    stage('Deploy - Production') {
+        steps {
+            sh 'pwd'
+        }
+    }
     }
 }
